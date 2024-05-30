@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/olive"
+    tools:context=".StudyGroupFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/imageRate"-->
+<!--        android:layout_width="49dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="168dp"-->
+<!--        android:layout_marginTop="528dp"-->
+<!--        android:padding="4dp"-->
+<!--        android:src="@drawable/baseline_grade"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:tint="@color/red"></androidx.appcompat.widget.AppCompatImageView>-->
+
+    <ScrollView
+        android:layout_width="361dp"
+        android:layout_height="389dp"
+        app:layout_constraintBottom_toBottomOf="@+id/getresponse"
+        app:layout_constraintEnd_toEndOf="@+id/getresponse"
+        app:layout_constraintStart_toStartOf="@+id/getresponse"
+        app:layout_constraintTop_toTopOf="@+id/getresponse">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGroups"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomnavbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studyHead">
+            <!-- Cards will be added programmatically here -->
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/studyHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/gidugu"
+        android:text="Study Groups"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="@color/red"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavbar"
+        android:layout_width="368dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="2dp"
+        app:menu="@menu/bottom_navbar"
+        app:itemIconSize="30dp"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@drawable/bottomnavbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <TextView
+        android:id="@+id/getresponse"
+        android:layout_width="374dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomnavbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyHead"
+        app:layout_constraintVertical_bias="0.113" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
